@@ -71,9 +71,8 @@ export default {
     max-width: 1440px;  
     margin-left: auto;
     margin-right: auto;
-    @include grid-lg; 
-    display: grid;
-    align-items:center;
+    display: flex;
+    justify-content: center;
 }
 
 .pic-social-network{

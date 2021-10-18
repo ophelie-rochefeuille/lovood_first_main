@@ -5,11 +5,12 @@
    <img class="logo-lovood" alt="logo" src="../assets/pictures/logo.png">
    <div class="buttons-main">
    <button class="button-header" type="button">Connexion</button>
-   <button class="button-header" type="button">Inscription</button>
+   <router-link to='/inscription' class="button-header">Inscription</router-link>
     </div>
 </div>
- 
+
 </header>
+
 </template>
  
 <script>
@@ -34,22 +35,14 @@ header {
 }
 
 .header-main{
-@include grid-lg;
-display: grid;
-max-width: 1440px;
+display:flex;
+justify-content: space-between;
 margin-left: auto;
 margin-right: auto;
 }
 
-.logo-lovood{
-  grid-column: 1/ span 2;
-  width: 100%;
-}
-
 .buttons-main{
   display:flex;
-  width: 100%;
-grid-column: 11/ span 2;
 }
  
 .logo-lovood{
