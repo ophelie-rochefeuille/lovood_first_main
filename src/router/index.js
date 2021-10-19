@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Inscription from '../components/inscription/Inscription.vue';
 import HomePage from '../components/HomePage.vue';
-import Header from "../components/Header.vue";
+
 
 
 const routes = [
@@ -9,11 +9,6 @@ const routes = [
         path: '/inscription',
         name: 'Inscription',
         component: Inscription
-    },
-    {
-        path: '/',
-        name: 'Header',
-        component: Header
     },
     {
         path: '/',

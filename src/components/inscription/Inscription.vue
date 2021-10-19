@@ -9,8 +9,8 @@
     </div>
 
     <div class="form-one">
-      <div class="card">
-        <div class="card">
+      <div class="card card-one">
+        <div class="card card-two">
           <form @submit="checkForm" action="https://vuejs.org/" method="post">
             <!-- Comment 
  <p >
@@ -78,29 +78,7 @@
 </template>
  
 <script>
-const init = () => {
-  console.log("init");
 
-  const cards = document.querySelectorAll(".card");
-  console.log(cards);
-  cards.forEach((card, i) => {
-    const offsetLeft = `${i * Math.random(10) * 10}px`;
-    console.log(offsetLeft);
-    const offsetRight = `${i * Math.random(10) * -10}px`;
-    if (i % 2 == 0) {
-      card.style.setProperty("--offset", offsetLeft);
-    } else {
-      card.style.setProperty("--offset", offsetRight);
-    }
-    const nbCards = cards.length;
-    const color = `rgb(0, ${255 - (i / 20) * 255}, 0)`;
-    card.style.setProperty("--color", color);
-    const z = nbCards - i;
-    card.style.setProperty("--zIndex", z);
-  });
-};
-
-init();
 </script>
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -123,7 +101,12 @@ init();
 .form-one {
   grid-column: 7 / span 5;
 }
-.card {
-  --offset: 0;
+.card-one {
+  background-color: #FFF2B5;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.card-two {
+  background-color: #C0BAF5;
 }
 </style>
