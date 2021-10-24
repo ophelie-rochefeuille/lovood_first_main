@@ -4,13 +4,13 @@
       <img
         class="inscription-pic-one"
         alt="couple"
-        src="../../assets/pictures/inscription_img_1.png"
+        src="../../assets/pictures/inscriptionFicheDeuxImg.png"
       />
     </div>
 
     <div class="form-one">
       <div class="card card-two">
-        <form @submit="checkForm" action="/inscriptionPhaseDeux">
+        <form @submit="checkForm" action="/inscriptionPhaseTrois">
           <!-- Comment 
  <p >
   <b>Please correct the following error(s):</b>
@@ -21,70 +21,44 @@
 -->
           <p>
             <input
-              placeholder="Nom"
+              placeholder="Ville"
               class="name input-inscription"
               type="text"
-              name="Nom"
+              name="Ville"
             />
           </p>
 
           <p>
-            <input
-              placeholder="Prénom"
-              class="firstname input-inscription"
-              type="text"
-              name="Prenom"
-            />
-          </p>
-
-          <p>
-            <label class="label-inscription" for="bday"
-              >Date de naissance</label
-            >
-            <input
-              class="input-inscription"
-              type="date"
-              id="bday"
-              name="bday"
-              required
-              pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-            />
-          </p>
-
-          <p>
-            <label class="label-inscription">Genre</label>
-            <select
-              class="genre input-inscription"
-              name="genre"
-              placeholder="Nom"
-            >
+            <label class="label-inscription">Quel genre cherches-tu?</label>
+            <select class="genre input-inscription" name="genre">
               <option>Femme</option>
               <option>Homme</option>
               <option>Autre</option>
               <option>Non genré</option>
+              <option>Peu importe</option>
             </select>
           </p>
 
-          <input
-            class="email-inscription input-inscription"
-            for="email"
-            type="email"
-            placeholder="Please enter your email here"
-            required
-            v-model="email"
-          />
-
           <p>
             <input
-              placeholder="Nom d'utilisateur"
-              class="name-user input-inscription"
+              placeholder="Quel est ton plat préféré ?"
+              class="name input-inscription"
               type="text"
-              name="user"
+              name="plat"
             />
           </p>
 
           <p>
-            <input type="submit" value="Inscris-toi !" class="submit" />
+            <input
+              placeholder="Quel sont tes hobbies ?"
+              class="name input-inscription"
+              type="text"
+              name="hobbies"
+            />
+          </p>
+
+          <p>
+            <input type="submit" value="C'est parti !" class="submit" />
           </p>
         </form>
       </div>
